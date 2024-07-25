@@ -1,0 +1,43 @@
+.n1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 50px;
+    text-transform: uppercase;
+    color: rgb(233, 213, 191);
+}
+
+.c1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: rgb(65, 56, 46);
+}
+
+.c2 {
+    /* font-size: 50px; */
+    font-weight: 600;
+    color: rgb(65, 56, 46);
+}
+
+.input1 {
+    height: 45px;
+}
+
+.s1 {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.l1 {
+    margin-left: 200px;
+    border-radius: 20px;
+}
+
+.l2 {
+    margin-left: 5px;
+}
+.op{
+    opacity: 20%;
+}
+.cc1{
+    
+}
