@@ -5,7 +5,7 @@ import "./App.css"
 function Recipies() {
   return (
     <>
-      <div className='container'>
+      <div className='container recipe'>
         <div className='row'>
           <div className='col-lg-6'>
             <div className='row mt-5'>
