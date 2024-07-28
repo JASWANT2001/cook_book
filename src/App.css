@@ -1,6 +1,6 @@
 .bl {
     background-color: #e7e0d9;
-    height: 740px;
+    height:100%;
 }
 
 .n1 {
@@ -24,7 +24,7 @@
 }
 
 .input1 {
-    height: 45px;
+    height: 40px;
 }
 
 .s1 {
@@ -33,12 +33,12 @@
 }
 
 .l1 {
-    margin-left: 200px;
+    margin-left: 100px;
     border-radius: 20px;
 }
 
 .l2 {
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
 
 .op {

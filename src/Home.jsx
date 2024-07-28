@@ -71,7 +71,7 @@ function Home() {
           </nav>
         </div>
 
-        <div className="row mt-5 ">
+        <div className="row mt-2 ">
           <h2 className="d-flex justify-content-center c1">
             Good Food. Equals Good Mood. <br />
           </h2>
@@ -133,13 +133,13 @@ function Home() {
             </div>
           </Link>
 
-          <Link className="l2" style={{ width: "45rem" }} to={"/create"}>
+          <Link className="l2" style={{ width: "30rem" }} to={"/create"}>
             <div className="card-body" style={{ position: "relative" }}>
               <img
                 src="https://img.freepik.com/free-photo/view-cartoon-chef-with-delicious-3d-pizza_23-2151017552.jpg?ga=GA1.1.591406262.1711514535&semt=ais_user"
                 alt=""
                 height="300px"
-                width="500px"
+                width="450px"
                 className="rounded op"
                 style={{ display: "block" }}
               />

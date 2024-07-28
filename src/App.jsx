@@ -1,10 +1,11 @@
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Create from "./Create";
+import FileUploadForm from "./FileUploadForm"
 import Menu from "./Menu";
 import Home from "./Home";
 import "./App.css";
-import FileUploadForm from "./FileUploadForm";
+import Login from "./Login";
+import Register from "./Register";
 
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
       <div className="bl">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/create" element={<Create />} /> */}
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register/>} />
+            <Route path="/home" element={<Home />} />
             <Route path="/create" element={<FileUploadForm/>} />
             <Route path="/menu" element={<Menu />} />
           </Routes>

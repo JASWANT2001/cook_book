@@ -58,7 +58,7 @@ const FileUploadForm = () => {
         formikbag.resetForm();
         setFile(null);
         fetchUploadedFiles();
-        navigate("/");
+        navigate("/home");
       } catch (error) {
         console.log(error);
         alert("Something went wrong");
@@ -193,7 +193,9 @@ const FileUploadForm = () => {
                   />
                 </div>
                 <span style={{ color: "red" }}>{formik.errors.image}</span>
-                <div className="col-12 mt-4">
+                <div className="col-12 mt-4" style={{
+                  paddingBottom:"80px"
+                }}>
                   <button className="btn btn-primary">Submit</button>
                 </div>
               </div>
