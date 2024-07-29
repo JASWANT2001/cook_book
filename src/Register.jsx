@@ -11,11 +11,15 @@ function Register() {
       password: "",
       repassword: "",
     },
-    onSubmit: async (values) => {
+    onSubmit: async (values, formikbag) => {
       try {
-        axios.post("http://localhost:3002/register", values);
+        let response = await axios.post(
+          "http://localhost:5000/register",
+          values
+        );
         console.log(values);
         alert("Registered Successfully");
+        formikbag.resetForm();
       } catch (error) {
         console.log(error);
         alert("Error Occured");

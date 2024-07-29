@@ -3,15 +3,28 @@ import React from "react";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  let navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      try {
+        let response = await axios.post("http://localhost:5000/login", values);
+        console.log(values);
+        alert("Login Successfully");
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("name", response.data.loginuser.firstname);
+        navigate("/home");
+      } catch (error) {
+        console.log(error);
+        alert(error.response.data.message);
+      }
     },
   });
   return (

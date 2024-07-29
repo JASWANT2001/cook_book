@@ -3,8 +3,19 @@ import React from "react";
 import "./App.css";
 import logo from "./assets/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useNavigate } from "react-router-dom";
+import Dropdown from "react-bootstrap/Dropdown";
+import NavDropdown from "react-bootstrap/NavDropdown";
+
 
 function Home() {
+  let navigate = useNavigate();
+
+  let handlelogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
   return (
     <>
       <div className="container bl">
@@ -65,7 +76,20 @@ function Home() {
                    Search
                  </button>
                </form> */}
-                <i class="fa-solid fa-circle-user fa-2xl"></i>
+                <NavDropdown
+                  id="nav-dropdown-dark-example"
+                  title={`Hi, ${localStorage.getItem("name")}!`}
+                  menuVariant="dark"
+                >
+                  <Dropdown.Item className="" to="">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <Link className="">My Profile</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="" onClick={handlelogout}>
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </Dropdown.Item>
+                </NavDropdown>
               </div>
             </div>
           </nav>
